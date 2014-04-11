@@ -12,8 +12,8 @@ $time3=ceil($sttime-$nowtime);
 
 
 $im=imagecreate(500,150); //创建600*100画布
-imagecolorallocate($im,34,34,34);//画布颜色
-$textcolor=imagecolorallocate($im,0,128,0);//字体颜色
+imagecolorallocate($im,0,0,0);//画布颜色
+$textcolor=imagecolorallocate($im,9,112,65);//字体颜色
 $motto=iconv("gb2312","utf-8","        生命倒计时\n".date(" y年m月d天 H时i分s秒",mktime(0,0,$time3,0,0,0))."\n    powered by:小子(LT)");
 imageTTFText($im,24,0,20,40,$textcolor,'font.ttf',$motto);
 imagejpeg($im);
