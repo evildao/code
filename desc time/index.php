@@ -1,21 +1,22 @@
 <?php
 header("content-type:image/jpeg");
-$nowtime=strtotime(date("Y-m-d H:i:s"));//µ±Ç°Ê±¼ä
-$oneyear=31557600;//Ã¿ÄêµÄÃëÊı
-$oldtime=strtotime("1991-10-23 00:00:00");//³öÉúÈÕÆÚ
-$runyear=60;//»îµÄÄêÏŞ
+$nowtime=strtotime(date("Y-m-d H:i:s"));//å½“å‰æ—¶é—´
+$oneyear=31557600;//æ¯å¹´çš„ç§’æ•°
+$oldtime=strtotime("1991-10-23 00:00:00");//å‡ºç”Ÿæ—¥æœŸ
+$runyear=60;//æ´»çš„å¹´é™
 $sttime=$oneyear*$runyear+$oldtime;
 $time3=ceil($sttime-$nowtime);
 
 //echo $time3.'<br/>';
-//echo date("yÄêmÔÂdÈÕ HÊ±i·ÖsÃë",mktime(0,0,$time3,0,0,0));
+//echo date("yå¹´mæœˆdæ—¥ Hæ—¶iåˆ†sç§’",mktime(0,0,$time3,0,0,0));
 
 
-$im=imagecreate(500,150); //´´½¨600*100»­²¼
-imagecolorallocate($im,0,0,0);//»­²¼ÑÕÉ«
-$textcolor=imagecolorallocate($im,9,112,65);//×ÖÌåÑÕÉ«
-$motto=iconv("gb2312","utf-8","        ÉúÃüµ¹¼ÆÊ±\n".date(" yÄêmÔÂdÌì HÊ±i·ÖsÃë",mktime(0,0,$time3,0,0,0))."\n    powered by:Ğ¡×Ó(LT)");
-imageTTFText($im,24,0,20,40,$textcolor,'font.ttf',$motto);
+$im=imagecreate(500,150); //åˆ›å»ºç”»å¸ƒ
+imagecolorallocate($im,34,34,34);//ç”»å¸ƒé¢œè‰²
+$textcolor=imagecolorallocate($im,9,112,65);//å­—ä½“é¢œè‰²
+//$motto=iconv("gb2312","utf-8","        ç”Ÿå‘½å€’è®¡æ—¶\n".date(" yå¹´mæœˆdå¤© Hæ—¶iåˆ†sç§’",mktime(0,0,$time3,0,0,0))."\n    powered by:å°å­(LT)");
+$motto = "        ç”Ÿå‘½å€’è®¡æ—¶\n".date(" yå¹´mæœˆdå¤© Hæ—¶iåˆ†sç§’",mktime(0,0,$time3,0,0,0))."\n    powered by:å°å­(LT)";
+imageTTFText($im,24,0,20,40,$textcolor,'font2.ttf',$motto);
 imagejpeg($im);
 imagedestroy($im);
 
