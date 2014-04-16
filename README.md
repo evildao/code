@@ -5,3 +5,4 @@
 * \cool page : 酷页
 * \desc time : 生命倒计时
 * \color blank : 色块沙盘
+* \news : 静态化新闻系统
