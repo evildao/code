@@ -6,3 +6,5 @@
 * \desc time : 生命倒计时
 * \color blank : 色块沙盘
 * \news : 静态化新闻系统
+* \TP3.1+UCenter : 自己修改版uc客户端（内附Demo）
+* \TP3.2+UCenter : 基于命名空间的改良版UCenter+Thinkphp整合，亲测，很好用
