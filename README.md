@@ -9,3 +9,4 @@
 * \TP3.1+UCenter : 自己修改版uc客户端（内附Demo）
 * \TP3.2+UCenter : 基于命名空间的改良版UCenter+Thinkphp整合，亲测，很好用
 * \git.php : 能够拉取github上面的程序包，然后解压（一个别样的git网站更新程序）
+* \xinkong.html cansv 画布特效
